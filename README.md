@@ -1,2 +1,2 @@
-# Paradox_Generator
+# Paradox Generator
 Generator for literally anything.
