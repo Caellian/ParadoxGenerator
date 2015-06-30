@@ -1,0 +1,105 @@
+<generator>
+    <forest>
+        <hole>
+            <hunger/>
+            <cold/>
+            <bugs/>
+        </hole>
+        <path>
+            <village>
+                <gold/>
+                <dwarves>
+                    <angry>
+                        <died/>
+                        <escaped/>
+                    </angry>
+                    <cheerful>
+                        <fun/>
+                        <work_hard/>
+                        <annoying/>
+                    </cheerful>
+                </dwarves>
+                <witch>
+                    <bad>
+                        <died/>
+                        <escaped/>
+                    </bad>
+                    <good>
+                        <learn_magic/>
+                        <fight_evil/>
+                    </good>
+                </witch>
+            </village>
+            <old_ruin>
+                <cobweb/>
+                <snakes/>
+                <gold_own/>
+            </old_ruin>
+            <cottage>
+                <old_man>
+                    <evil>
+                        <died/>
+                        <escaped/>
+                    </evil>
+                    <old_man_good>
+                        <fight_evil/>
+                        <work_hard/>
+                    </old_man_good>
+                </old_man>
+                <abandoned/>
+                <overgrown/>
+            </cottage>
+        </path>
+    </forest>
+    <town>
+        <road>
+            <nowhere/>
+            <dead_end/>
+        </road>
+        <building>
+            <tall/>
+            <small/>
+        </building>
+    </town>
+    <strings>
+        <forest>Forest Generator</forest>
+        <hole>As you walked, you accidentally fell into a hole</hole>
+        <hunger>and with time, you couldn't escape, so you died of starvation.</hunger>
+        <cold>and with time, you froze to death.</cold>
+        <bugs>it was full of bugs who ate you.</bugs>
+        <path>You stumbled upon a path</path>
+        <village>that lead to a village</village>
+        <dwarves>full of dwarves.</dwarves>
+        <angry>They got really angry</angry>
+        <died>and killed you.</died>
+        <escaped>but you managed to escape.</escaped>
+        <cheerful>They were very cheerful</cheerful>
+        <fun>and you had much fun together.</fun>
+        <work_hard>and you worked hard for the rest of your life.</work_hard>
+        <annoying>, they were really annoying and annoyed you for the rest of your life.</annoying>
+        <witch>owned by a witch.</witch>
+        <bad>She was very evil</bad>
+        <good>She was very good</good>
+        <learn_magic>and thought you how to use magic.</learn_magic>
+        <fight_evil>and together you fought evil.</fight_evil>
+        <old_ruin>on which an old ruin was built.</old_ruin>
+        <cobweb>It was full of cobweb and spiders.</cobweb>
+        <snakes>The whole floor was covered with snakes.</snakes>
+        <gold>and you found gold there.</gold>
+        <gold_own>You found gold there.</gold_own>
+        <cottage>after following it, you stumbled upon a cottage.</cottage>
+        <old_man>An old man lived there</old_man>
+        <evil>he was very evil</evil>
+        <old_man_good>he was very good</old_man_good>
+        <abandoned>It was abandoned.</abandoned>
+        <overgrown>It was overgrown.</overgrown>
+
+        <town>Town Generator</town>
+        <road>You followed a road</road>
+        <nowhere>it lead nowhere.</nowhere>
+        <dead_end>it lead to an dead end.</dead_end>
+        <building>You looked at an</building>
+        <tall>tall building.</tall>
+        <small>small building.</small>
+    </strings>
+</generator>
