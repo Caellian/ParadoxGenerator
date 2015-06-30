@@ -25,5 +25,5 @@ import com.caellyan.core.configuration.IConfiguration;
  */
 public class Settings implements IConfiguration
 {
-	public static String GENERATOR_SOURCE = "file:///F:/Random_Generator/Example.xml";
+	public static String GENERATOR_SOURCE = "https://raw.githubusercontent.com/Caellian/Paradox_Generator/master/Example.xml";
 }

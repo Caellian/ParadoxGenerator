@@ -18,10 +18,12 @@
 
 package com.caellian.generator;
 
+import com.caellian.generator.configuration.Settings;
 import com.caellian.generator.gui.Generator;
 import com.caellian.generator.gui.Style;
 import com.caellian.generator.lib.Reference;
 import com.caellian.generator.resource.StoredData;
+import com.caellyan.core.configuration.Configuration;
 
 import java.util.Calendar;
 
@@ -33,9 +35,16 @@ public class ParadoxGenerator
 				  "This program comes with ABSOLUTELY NO WARRANTY.\n" +
 				  "This is free software, and you are welcome to redistribute it with attribution.");
 
+		initConfiguration();
 		StoredData.initData();
 		Style.loadUIStyles();
 
 		Generator generatorWindow = new Generator();
+	}
+
+	private static void initConfiguration()
+	{
+		Configuration configuration = new Configuration(new Settings());
+		configuration.loadConfig();
 	}
 }
