@@ -20,6 +20,7 @@ package com.caellian.generator.lib;
 
 import com.caellian.generator.ParadoxGenerator;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
@@ -29,4 +30,17 @@ public class Resources
 {
 	public static final URL splash = ParadoxGenerator.class.getResource("/splash/splash.png");
 	public static final URL icon   = ParadoxGenerator.class.getResource("/icon/64.png");
+
+	public static final URL versionsFile = getVersionsFile();
+
+	private static URL getVersionsFile()
+	{
+		try
+		{
+			return new URL("https://raw.githubusercontent.com/Caellian/Paradox_Generator/master/versions.xml");
+		} catch (MalformedURLException e)
+		{
+			return null;
+		}
+	}
 }

@@ -1,5 +1,5 @@
 /*
- * Paradox Generator, generator for everything
+ * Paradox Generator, generator for everything.
  * Copyright (C) 2015 Caellian
  *
  * This program is free software: you can redistribute it and/or modify
@@ -13,17 +13,17 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
 package com.caellian.generator.resource;
 
 import com.caellian.generator.configuration.Settings;
+import com.caellyan.core.util.IterableNodeList;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Maps;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -53,10 +53,8 @@ public class DataReader
 
 			Node root = document.getElementsByTagName("generator").item(0);
 
-			NodeList rootChildren = root.getChildNodes();
-			for (int child = 0; child < rootChildren.getLength(); child++)
+			for (Node source : new IterableNodeList(root.getChildNodes()))
 			{
-				Node source = rootChildren.item(child);
 				if (Objects.equals(source.getNodeName(), "strings"))
 				{
 					StoredData.strings.putAll(getStringData(source));
@@ -89,15 +87,10 @@ public class DataReader
 		HashMultimap<String, String> result = HashMultimap.create();
 		if (source.getChildNodes().getLength() >= 1)
 		{
-			for (int child = 0; child < source.getChildNodes().getLength(); child++)
-			{
-				Node nextSource = source.getChildNodes().item(child);
-				if (!Objects.equals(source.getNodeName(), "#text") && !Objects.equals(nextSource.getNodeName(), "#text"))
-				{
-					result.put(source.getNodeName(), nextSource.getNodeName());
-					result.putAll(getChildMultidata(nextSource));
-				}
-			}
+			new IterableNodeList(source.getChildNodes()).stream().filter(nextSource->!Objects.equals(source.getNodeName(), "#text") && !Objects.equals(nextSource.getNodeName(), "#text")).forEach(nextSource->{
+				result.put(source.getNodeName(), nextSource.getNodeName());
+				result.putAll(getChildMultidata(nextSource));
+			});
 		}
 		else
 		{
@@ -114,13 +107,7 @@ public class DataReader
 		HashMap<String, String> result = Maps.newHashMap();
 		if (source.getChildNodes().getLength() >= 1)
 		{
-			for (int child = 0; child < source.getChildNodes().getLength(); child++)
-			{
-				if (!Objects.equals(source.getChildNodes().item(child).getNodeName(), "#text"))
-				{
-					result.put(source.getChildNodes().item(child).getNodeName(), source.getChildNodes().item(child).getTextContent());
-				}
-			}
+			new IterableNodeList(source.getChildNodes()).stream().filter(node->!Objects.equals(node.getNodeName(), "#text")).forEach(node->result.put(node.getNodeName(), node.getTextContent()));
 		}
 		return result;
 	}

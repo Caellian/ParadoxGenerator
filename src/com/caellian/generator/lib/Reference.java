@@ -28,7 +28,7 @@ public class Reference
 {
 	public static final String PROGRAM_ID = "paradox_generator";
 	public static final String PROGRAM_NAME = "Paradox Generator";
-	public static final String PROGRAM_VERSION = "2.0.0";
+	public static final String PROGRAM_VERSION = "2.1.0";
 	public static final String PROGRAM_AUTHOR = "Caellian";
 
 

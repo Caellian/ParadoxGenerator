@@ -26,6 +26,8 @@ import com.caellian.generator.lib.Resources;
 import com.caellian.generator.resource.StoredData;
 import com.caellyan.core.GUI.SplashScreen;
 import com.caellyan.core.configuration.Configuration;
+import com.caellyan.core.versionControl.Version;
+import com.caellyan.core.versionControl.VersionManager;
 
 import java.util.Calendar;
 
@@ -39,6 +41,9 @@ public class ParadoxGenerator
 
 		SplashScreen splashScreen = new SplashScreen(Resources.splash, Resources.icon);
 		splashScreen.showSplash();
+		VersionManager versionManager = new VersionManager(Resources.versionsFile);
+		System.out.println(versionManager.checkVersion(new Version(Reference.PROGRAM_VERSION)));
+
 		initConfiguration();
 		StoredData.initData();
 		Style.loadUIStyles();
