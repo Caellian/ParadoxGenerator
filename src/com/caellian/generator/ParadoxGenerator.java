@@ -1,5 +1,5 @@
 /*
- * Paradox Generator, generator for everything
+ * Paradox Generator, generator for everything.
  * Copyright (C) 2015 Caellian
  *
  * This program is free software: you can redistribute it and/or modify
@@ -13,7 +13,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
 package com.caellian.generator;
@@ -22,29 +22,34 @@ import com.caellian.generator.configuration.Settings;
 import com.caellian.generator.gui.Generator;
 import com.caellian.generator.gui.Style;
 import com.caellian.generator.lib.Reference;
+import com.caellian.generator.lib.Resources;
 import com.caellian.generator.resource.StoredData;
+import com.caellyan.core.GUI.SplashScreen;
 import com.caellyan.core.configuration.Configuration;
 
 import java.util.Calendar;
 
 public class ParadoxGenerator
 {
+	public static Configuration configuration;
+
 	public static void main(String[] args)
 	{
-		System.out.println(Reference.PROGRAM_NAME + ", Copyright (C) " + Calendar.getInstance().get(Calendar.YEAR) + " " + Reference.PROGRAM_AUTHOR + "\n" +
-				  "This program comes with ABSOLUTELY NO WARRANTY.\n" +
-				  "This is free software, and you are welcome to redistribute it with attribution.");
+		System.out.println(Reference.PROGRAM_NAME + ", Copyright (C) " + Calendar.getInstance().get(Calendar.YEAR) + " " + Reference.PROGRAM_AUTHOR);
 
+		SplashScreen splashScreen = new SplashScreen(Resources.splash, Resources.icon);
+		splashScreen.showSplash();
 		initConfiguration();
 		StoredData.initData();
 		Style.loadUIStyles();
+		splashScreen.hideSplash();
 
 		Generator generatorWindow = new Generator();
 	}
 
 	private static void initConfiguration()
 	{
-		Configuration configuration = new Configuration(new Settings());
+		configuration = new Configuration(new Settings());
 		configuration.loadConfig();
 	}
 }

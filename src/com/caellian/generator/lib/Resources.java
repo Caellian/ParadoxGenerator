@@ -18,18 +18,15 @@
 
 package com.caellian.generator.lib;
 
+import com.caellian.generator.ParadoxGenerator;
+
+import java.net.URL;
+
 /**
- * Class containing information about this program.
- * <br>
- * <br>
- * Created by Caellian on 30.6.2015., at 0:39.
+ * Created by Caellian on 3.7.2015., at 1:51.
  */
-public class Reference
+public class Resources
 {
-	public static final String PROGRAM_ID = "paradox_generator";
-	public static final String PROGRAM_NAME = "Paradox Generator";
-	public static final String PROGRAM_VERSION = "2.0.0";
-	public static final String PROGRAM_AUTHOR = "Caellian";
-
-
+	public static final URL splash = ParadoxGenerator.class.getResource("/splash/splash.png");
+	public static final URL icon   = ParadoxGenerator.class.getResource("/icon/64.png");
 }

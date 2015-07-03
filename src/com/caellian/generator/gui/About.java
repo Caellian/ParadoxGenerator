@@ -16,20 +16,34 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.caellian.generator.lib;
+package com.caellian.generator.gui;
+
+import com.caellian.generator.lib.Reference;
+import com.caellian.generator.lib.Resources;
+
+import javax.swing.*;
 
 /**
- * Class containing information about this program.
- * <br>
- * <br>
- * Created by Caellian on 30.6.2015., at 0:39.
+ * Created by Caellian on 1.7.2015., at 0:20.
  */
-public class Reference
+public class About extends JFrame
 {
-	public static final String PROGRAM_ID = "paradox_generator";
-	public static final String PROGRAM_NAME = "Paradox Generator";
-	public static final String PROGRAM_VERSION = "2.0.0";
-	public static final String PROGRAM_AUTHOR = "Caellian";
+	private JPanel    mainPanel;
+	private JTextPane thisProgramWasCreatedTextPane;
+	private JLabel    logoLabel;
 
+	public About()
+	{
+		super(Reference.PROGRAM_NAME + " - About");
+		this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+		this.setContentPane(mainPanel);
+		this.setIconImage(new ImageIcon(Resources.icon).getImage());
+		this.pack();
+		this.setVisible(true);
+	}
 
+	private void createUIComponents()
+	{
+		logoLabel = new JLabel(new ImageIcon(Resources.icon));
+	}
 }

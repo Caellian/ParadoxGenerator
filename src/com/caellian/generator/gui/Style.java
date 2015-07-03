@@ -1,5 +1,5 @@
 /*
- * Paradox Generator, generator for everything
+ * Paradox Generator, generator for everything.
  * Copyright (C) 2015 Caellian
  *
  * This program is free software: you can redistribute it and/or modify
@@ -13,7 +13,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
 package com.caellian.generator.gui;
@@ -73,8 +73,8 @@ public class Style
 		public static Color STYLE_CONTROL                 = new Color(40, 40, 40);
 		public static Color STYLE_TEXT                    = new Color(255, 255, 255);
 		public static Color STYLE_NIMBUS_BASE             = new Color(0, 0, 0);
-		public static Color STYLE_NIMBUS_FOCUS            = new Color(214, 100, 0);
-		public static Color STYLE_NIMBUS_BORDER           = new Color(55, 26, 0);
+		public static Color STYLE_NIMBUS_FOCUS  = new Color(0, 79, 214);
+		public static Color STYLE_NIMBUS_BORDER = new Color(0, 28, 55);
 		public static Color STYLE_NIMBUS_LIGHT_BACKGROUND = new Color(50, 50, 50);
 		public static Color STYLE_INFO                    = new Color(80, 80, 80);
 	}

@@ -1,5 +1,5 @@
 /*
- * Paradox Generator, generator for everything
+ * Paradox Generator, generator for everything.
  * Copyright (C) 2015 Caellian
  *
  * This program is free software: you can redistribute it and/or modify
@@ -13,17 +13,24 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
 package com.caellian.generator.gui;
 
+import com.caellian.generator.ParadoxGenerator;
+import com.caellian.generator.configuration.Settings;
 import com.caellian.generator.lib.Reference;
+import com.caellian.generator.lib.Resources;
 import com.caellian.generator.resource.StoredData;
 import com.caellian.generator.util.StringManagement;
 
 import javax.swing.*;
+import javax.swing.event.MouseInputAdapter;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Objects;
 
 /**
@@ -39,14 +46,20 @@ public class Generator extends JFrame
 	private JRadioButton listRadioButton;
 	private JRadioButton sentenceRadioButton;
 	private JButton      generateButton;
+	private JLabel  logoLabel;
+	private JLabel  generatorLabel;
+	private JButton changeSourceButton;
 
 	private String generator = "";
+	private Generator self;
 
 	public Generator()
 	{
 		super(Reference.PROGRAM_NAME);
+		self = this;
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		this.setContentPane(mainPanel);
+		this.setIconImage(new ImageIcon(Resources.icon).getImage());
 		this.initComponents();
 		this.pack();
 		this.setVisible(true);
@@ -54,10 +67,26 @@ public class Generator extends JFrame
 
 	private void initComponents()
 	{
-		countSpinner.addChangeListener(e->{
-			if ((int) countSpinner.getValue() < 1)
+		generatorLabel.addMouseListener(new MouseInputAdapter()
+		{
+			@Override
+			public void mouseClicked(MouseEvent e)
 			{
-				countSpinner.setValue(1);
+				super.mouseClicked(e);
+				String source = JOptionPane.showInputDialog(self, "Please enter URL of new source:", "New Source", JOptionPane.QUESTION_MESSAGE);
+				if (source != null && !source.isEmpty())
+				{
+					try
+					{
+						Settings.GENERATOR_SOURCE = new URL(source).toString();
+					} catch (MalformedURLException e1)
+					{
+						JOptionPane.showMessageDialog(self, "You entered malformed URL!", "Bad URL", JOptionPane.ERROR_MESSAGE);
+					} finally
+					{
+						ParadoxGenerator.configuration.updateConfigFile();
+					}
+				}
 			}
 		});
 
@@ -107,6 +136,19 @@ public class Generator extends JFrame
 						}
 					}
 				}).run();
+			}
+		});
+	}
+
+	private void createUIComponents()
+	{
+		logoLabel = new JLabel(new ImageIcon(Resources.icon));
+		logoLabel.addMouseListener(new MouseInputAdapter()
+		{
+			@Override
+			public void mouseClicked(MouseEvent e)
+			{
+				new About();
 			}
 		});
 	}
