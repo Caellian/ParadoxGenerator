@@ -1,2 +1,2 @@
 # Paradox Generator
-Generator for literally anything.
+Paradox Generator uses custom xml files to generate random sentences.
