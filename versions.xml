@@ -24,40 +24,50 @@
 
 <versions>
     <version>
+        <name>Templates. Templates everywhere!</name>
+        <version>3.0.0</version>
+        <changelog>- New intuitive splash screen.
+- Added Preferences GUI.
+- Paradox Generator can load multiple input files now (main file + libraries).
+- Changed xml generator file format to accommodate new features.
+- Rewritten xml parsing code and made it more stable.
+- Added templates, functions and localization support.
+- Fixed crash on startup if specified main file doesn't exist.
+- Optimised a lot of code.
+        </changelog>
+        <download>https://github.com/Caellian/ParadoxGenerator/releases/download/3.0.0/ParadoxGenerator-3.0.0.jar</download>
+    </version>
+    <version>
         <name>Gradle Fix!</name>
         <version>2.2.0</version>
-        <changelog>
-            - Fixed project structure.
-            - Reformatted code and included Caellian Core as it's slowly dying out.
-            - Switched to MIT license.
-            - Moved away from JetBrains form designer and written pure Swing GUI code.
+        <changelog>- Fixed project structure.
+- Reformatted code and included Caellian Core as it's slowly dying out.
+- Switched to MIT license.
+- Moved away from JetBrains form designer and written pure Swing GUI code.
         </changelog>
         <download>https://github.com/Caellian/ParadoxGenerator/releases/download/2.2.0/ParadoxGenerator-2.2.0.jar</download>
     </version>
     <version>
         <name>Project segmentation</name>
         <version>2.1.0</version>
-        <changelog>
-            - Added support for version management.
-            - Simplified some code using new convenience classes from Caellian Core.
+        <changelog>- Added support for version management.
+- Simplified some code using new convenience classes from Caellian Core.
         </changelog>
     </version>
     <version>
         <name>New and shiny!</name>
         <version>2.0.0</version>
-        <changelog>
-            - Added icons
-            - Added splash screen due to (in some cases) prolonged loading time
-            - Added .gitignore to help with project management
-            - Added about window accessible by clicking on program logo inside of the program.
-            - Made source changeable from withing program (accessed by clicking 'Generator:' inside of the main window.) - requires a restart in order for resources to load.
+        <changelog>- Added icons
+- Added splash screen due to (in some cases) prolonged loading time
+- Added .gitignore to help with project management
+- Added about window accessible by clicking on program logo inside of the program.
+- Made source changeable from withing program (accessed by clicking 'Generator:' inside of the main window.) - requires a restart in order for resources to load.
         </changelog>
     </version>
     <version>
         <name>First Version</name>
         <version>1.0.0</version>
-        <changelog>
-            - Created the program
+        <changelog>- Created the program
         </changelog>
     </version>
 </versions>

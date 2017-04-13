@@ -29,19 +29,14 @@ import hr.caellian.core.versionControl.Version;
 /**
  * Class containing information about this program.
  * <br>
- * <br>
  * Created by Caellian on 30.6.2015., at 0:39.
  */
 public class Reference {
-    public static final String PROGRAM_ID = "paradox_generator";
+    public static final String PROGRAM_AUTHOR = "Caellian";
     public static final String PROGRAM_NAME = "Paradox Generator";
 
-    public static final short PROGRAM_VERSION_MAJOR = 2;
-    public static final short PROGRAM_VERSION_MINOR = 2;
+    public static final short PROGRAM_VERSION_MAJOR = 3;
+    public static final short PROGRAM_VERSION_MINOR = 0;
     public static final short PROGRAM_VERSION_PATCH = 0;
     public static final Version PROGRAM_VERSION = new Version(Reference.PROGRAM_VERSION_MAJOR, Reference.PROGRAM_VERSION_MINOR, Reference.PROGRAM_VERSION_PATCH);
-
-    public static final String PROGRAM_AUTHOR = "Caellian";
-
-
 }

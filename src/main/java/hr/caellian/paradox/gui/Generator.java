@@ -24,23 +24,29 @@
 
 package hr.caellian.paradox.gui;
 
+import hr.caellian.core.versionControl.VersionManager;
 import hr.caellian.paradox.ParadoxGenerator;
 import hr.caellian.paradox.configuration.Settings;
 import hr.caellian.paradox.lib.Reference;
 import hr.caellian.paradox.lib.Resources;
-import hr.caellian.paradox.resource.StoredData;
+import hr.caellian.paradox.resource.ItemGenerator;
+import hr.caellian.paradox.resource.ItemManager;
 import hr.caellian.paradox.util.Pointer;
-import hr.caellian.paradox.util.StringManagement;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
-import javax.swing.event.MouseInputAdapter;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.MouseEvent;
+import java.awt.event.WindowEvent;
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Objects;
 
@@ -50,6 +56,19 @@ import java.util.Objects;
 public class Generator extends JFrame {
     private JPanel mainPanel = new JPanel(new GridBagLayout());
     private JLabel logoLabel = new JLabel(new ImageIcon(Resources.ICON));
+
+    private JMenuBar mainMenu = new JMenuBar();
+    private JMenu file = new JMenu("File");
+    private JMenuItem openFile = new JMenuItem("Open...");
+    private JMenuItem openURL = new JMenuItem("Open URL...");
+    private JMenuItem refresh = new JMenuItem("Refresh");
+    private JMenuItem settings = new JMenuItem("Settings...");
+    private JMenuItem exit = new JMenuItem("Exit");
+
+    private JMenu help = new JMenu("Help");
+    private JMenuItem documentation = new JMenuItem("Documentation");
+    private JMenuItem update = new JMenuItem("Check for Updates...");
+    private JMenuItem about = new JMenuItem("About");
 
     private JLabel generatorLabel = new JLabel("Generator:");
     private JComboBox<String> generatorComboBox = new JComboBox<>();
@@ -63,64 +82,178 @@ public class Generator extends JFrame {
     private JTextArea generatedTextArea = new JTextArea();
     private JScrollPane generatedScrollPane = new JScrollPane(generatedTextArea);
 
-    private String generator = StoredData.sources.get(0);
+    private ItemGenerator generator;
+
     private Generator self;
     private Pointer<Boolean> aboutOpen = new Pointer<>(false);
+    private Pointer<Boolean> settingsOpen = new Pointer<>(false);
 
     public Generator() {
         super(Reference.PROGRAM_NAME);
         this.self = this;
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.initComponents();
         this.setContentPane(mainPanel);
+        this.setJMenuBar(mainMenu);
+        this.initComponents();
         this.setIconImage(new ImageIcon(Resources.ICON).getImage());
+        this.setMinimumSize(new Dimension(500, 500));
         this.pack();
         this.setVisible(true);
     }
 
     private void initComponents() {
         mainPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
+        file.setMnemonic('F');
+
+        openFile.setMnemonic('O');
+        openFile.addActionListener(e -> {
+            FileDialog fileDialog = new FileDialog(self,"Open Source", FileDialog.LOAD);
+            fileDialog.setFilenameFilter((dir, name) -> name.endsWith(".xml"));
+            fileDialog.setVisible(true);
+
+            String old = Settings.GENERATOR_SOURCE;
+            try {
+                Settings.GENERATOR_SOURCE = new File(fileDialog.getDirectory(), fileDialog.getFile()).toURI().toURL().toString();
+            } catch (MalformedURLException urle) {
+                Settings.GENERATOR_SOURCE = old;
+                JOptionPane.showMessageDialog(self, "Paradox Generator received a malformed URL!", "Bad File URL", JOptionPane.ERROR_MESSAGE);
+            } finally {
+                ParadoxGenerator.configuration.updateConfigFile();
+                ItemManager.refreshData();
+
+                generatorComboBox.removeAllItems();
+                for (ItemGenerator generator : ItemManager.generators) {
+                    generatorComboBox.addItem(generator.getText(Settings.LOCALIZATION));
+                }
+                if(generatorComboBox.getItemCount() > 0) {
+                    generator = ItemManager.generators.get(0);
+                    generatorComboBox.setSelectedIndex(0);
+                }
+            }
+        });
+
+        file.add(openFile);
+
+        openURL.addActionListener(l -> {
+            String old = Settings.GENERATOR_SOURCE;
+            String source = JOptionPane.showInputDialog(self, "Please enter URL of new source:", "New Source", JOptionPane.QUESTION_MESSAGE);
+            if (source != null && !source.isEmpty()) {
+                try {
+                    Settings.GENERATOR_SOURCE = new URL(source).toString();
+                } catch (MalformedURLException e1) {
+                    Settings.GENERATOR_SOURCE = old;
+                    JOptionPane.showMessageDialog(self, "You entered malformed URL!", "Bad URL", JOptionPane.ERROR_MESSAGE);
+                } finally {
+                    ParadoxGenerator.configuration.updateConfigFile();
+                    ItemManager.refreshData();
+
+                    generatorComboBox.removeAllItems();
+                    for (ItemGenerator generator : ItemManager.generators) {
+                        generatorComboBox.addItem(generator.getText(Settings.LOCALIZATION));
+                    }
+                    if(generatorComboBox.getItemCount() > 0) {
+                        generator = ItemManager.generators.get(0);
+                        generatorComboBox.setSelectedIndex(0);
+                    }
+                }
+            }
+        });
+        file.add(openURL);
+
+        refresh.setMnemonic('R');
+        refresh.addActionListener(l -> {
+            ItemManager.refreshData();
+
+            generatorComboBox.removeAllItems();
+            for (ItemGenerator generator : ItemManager.generators) {
+                generatorComboBox.addItem(generator.getText(Settings.LOCALIZATION));
+            }
+            if(generatorComboBox.getItemCount() > 0) {
+                generator = ItemManager.generators.get(0);
+                generatorComboBox.setSelectedIndex(0);
+            }
+        });
+        file.add(refresh);
+
+        file.addSeparator();
+
+        settings.setMnemonic('S');
+        settings.addActionListener(l -> {
+            if (!settingsOpen.to) new Preferences(settingsOpen);
+        });
+//        file.add(settings); TODO: Add Settings GUI
+
+        file.addSeparator();
+
+        exit.setMnemonic('x');
+        exit.addActionListener(l -> self.dispatchEvent(new WindowEvent(self, WindowEvent.WINDOW_CLOSING)));
+        file.add(exit);
+
+        mainMenu.add(file);
+
+        help.setMnemonic('H');
+
+        documentation.setMnemonic('D');
+        documentation.addActionListener(l -> {
+            if(Desktop.isDesktopSupported())
+            {
+                try {
+                    Desktop.getDesktop().browse(new URI("https://github.com/Caellian/ParadoxGenerator/wiki"));
+                } catch (IOException | URISyntaxException ignore) {}
+            } else {
+                JOptionPane.showMessageDialog(self, "https://github.com/Caellian/ParadoxGenerator/wiki", "Documentation URL", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+        help.add(documentation);
+
+        help.addSeparator();
+
+        update.setMnemonic('U');
+        update.addActionListener(l -> {
+            VersionManager versionManager = new VersionManager(Resources.VERSIONS_FILE);
+            versionManager.currentVersion = Reference.PROGRAM_VERSION;
+            if (versionManager.updateAvailable()) {
+                Update updateNotifier = new Update(versionManager.getLatestVersion());
+            } else {
+                JOptionPane.showMessageDialog(self, "Paradox Generator is up to date!", "Update Not Available", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
+        help.add(update);
+
+        about.setMnemonic('A');
+        about.addActionListener(l -> {
+            if (!aboutOpen.to) new About(aboutOpen);
+        });
+        help.add(about);
+
+        mainMenu.add(help);
+
         GridBagConstraints c = new GridBagConstraints();
+
         c.ipadx = 10;
 
         c.gridx = 0;
         c.gridy = 0;
         c.gridwidth = 2;
-        logoLabel.addMouseListener(new MouseInputAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                if (!aboutOpen.to) new About(aboutOpen);
-            }
-        });
-        mainPanel.add(logoLabel, c);
+//        mainPanel.add(logoLabel, c);
 
-        for (String source : StoredData.sources) {
-            generatorComboBox.addItem(StoredData.strings.get(source));
+        for (ItemGenerator generator : ItemManager.generators) {
+            generatorComboBox.addItem(generator.getText(Settings.LOCALIZATION));
         }
-        generatorComboBox.setSelectedIndex(0);
+        if(generatorComboBox.getItemCount() > 0) {
+            generator = ItemManager.generators.get(0);
+            generatorComboBox.setSelectedIndex(0);
+        }
 
-        generatorLabel.addMouseListener(new MouseInputAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                String source = JOptionPane.showInputDialog(self, "Please enter URL of new source:", "New Source", JOptionPane.QUESTION_MESSAGE);
-                if (source != null && !source.isEmpty()) {
-                    try {
-                        Settings.GENERATOR_SOURCE = new URL(source).toString();
-                    } catch (MalformedURLException e1) {
-                        JOptionPane.showMessageDialog(self, "You entered malformed URL!", "Bad URL", JOptionPane.ERROR_MESSAGE);
-                    } finally {
-                        ParadoxGenerator.configuration.updateConfigFile();
-                    }
-                }
-            }
-        });
         c.gridy = 1;
         c.gridwidth = 1;
         c.weightx = 0;
         mainPanel.add(generatorLabel, c);
 
-        generatorComboBox.addActionListener(e -> StoredData.sources.stream().filter(source -> StoredData.strings.get(source) == generatorComboBox.getSelectedItem()).forEach(source -> generator = source));
+        generatorComboBox.addActionListener(l ->
+                ItemManager.generators.stream()
+                        .filter(source -> Objects.equals(source.getText(Settings.LOCALIZATION), generatorComboBox.getSelectedItem()))
+                        .forEach(source -> generator = source));
 
         c.gridx = 1;
         c.weightx = 1;
@@ -174,6 +307,7 @@ public class Generator extends JFrame {
         c.gridy = 3;
         c.weighty = 1;
         c.fill = GridBagConstraints.BOTH;
+        generatedTextArea.setLineWrap(true);
         generatedTextArea.setWrapStyleWord(true);
         mainPanel.add(generatedScrollPane, c);
 
@@ -182,23 +316,16 @@ public class Generator extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 new Thread(() -> {
                     generatedTextArea.setText("");
-                    for (int count = 0; count < (int) countSpinner.getValue(); count++) {
-                        if (listRadioButton.isSelected()) {
-                            if (Objects.equals(generatedTextArea.getText(), "")) {
-                                generatedTextArea.setText(StringManagement.generate(StoredData.data.get(generator)));
-                            } else {
-                                generatedTextArea.setText(generatedTextArea.getText() + "\n" + StringManagement.generate(StoredData.data.get(generator)));
-                            }
-                        } else if (sentenceRadioButton.isSelected()) {
-                            generatedTextArea.setLineWrap(true);
-                            if (Objects.equals(generatedTextArea.getText(), "")) {
-                                generatedTextArea.setText(StringManagement.generate(StoredData.data.get(generator)));
-                            } else {
-                                generatedTextArea.setText(generatedTextArea.getText() + " " + StringManagement.generate(StoredData.data.get(generator)));
-                            }
+                    for (int count = 0, length = 0; count < (int) countSpinner.getValue(); count++) {
+                        String insterted = generator.getChild().getText(Settings.LOCALIZATION, generator) + (listRadioButton.isSelected() ? "\n" : " ");
+                        try {
+                            Document doc = generatedTextArea.getDocument();
+                            doc.insertString(length, insterted, null);
+                        } catch (BadLocationException ignored) {} finally {
+                            length += insterted.length();
                         }
                     }
-                }).run();
+                }).start();
             }
         });
         c.gridy = 4;

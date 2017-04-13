@@ -1,0 +1,132 @@
+<!--
+  ~ The MIT License (MIT)
+  ~ Paradox Generator, random sentence generator.
+  ~ Copyright (c) 2017 Tin Švagelj <tin.svagelj@live.com> a.k.a. Caellian
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a
+  ~ copy of this software and associated documentation files (the "Software"),
+  ~ to deal in the Software without restriction, including without limitation
+  ~ the rights to use, copy, modify, merge, publish, distribute, sublicense,
+  ~ and/or sell copies of the Software, and to permit persons to whom the
+  ~ Software is furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+  ~ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  ~ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+  ~ DEALINGS IN THE SOFTWARE.
+  -->
+
+<paradox>
+    <generator id="forest">
+        <item id="hole">
+            <item id="hunger"/>
+            <item id="cold"/>
+            <item id="bugs"/>
+        </item>
+        <item id="path">
+            <item id="village">
+                <item id="gold"/>
+                <item id="dwarves">
+                    <item id="angry">
+                        <item id="died"/>
+                        <item id="escaped"/>
+                    </item>
+                    <item id="cheerful">
+                        <item id="fun"/>
+                        <item id="work_hard"/>
+                        <item id="annoying"/>
+                    </item>
+                </item>
+                <item id="witch">
+                    <item id="bad">
+                        <item id="died"/>
+                        <item id="escaped"/>
+                    </item>
+                    <item id="good">
+                        <item id="learn_magic"/>
+                        <item id="fight_evil"/>
+                    </item>
+                </item>
+            </item>
+            <item id="old_ruin">
+                <item id="cobweb"/>
+                <item id="snakes"/>
+                <item id="gold"/>
+            </item>
+            <item id="cottage">
+                <item id="old_man">
+                    <item id="evil">
+                        <item id="died"/>
+                        <item id="escaped"/>
+                    </item>
+                    <item id="old_man_good">
+                        <item id="fight_evil"/>
+                        <item id="work_hard"/>
+                    </item>
+                </item>
+                <item id="abandoned"/>
+                <item id="overgrown"/>
+            </item>
+        </item>
+
+        <localization to="en" name="Forest Generator">
+            <hole>As you walked, you accidentally fell into a hole</hole>
+            <hole.hunger> and with time, you couldn't escape, so you died of starvation.</hole.hunger>
+            <hole.cold> and with time, you froze to death.</hole.cold>
+            <hole.bugs> it was full of bugs who ate you.</hole.bugs>
+            <path>You stumbled upon a path</path>
+            <path.village> that lead to a village</path.village>
+            <path.village.gold> and you found gold there.</path.village.gold>
+            <path.village.dwarves> full of dwarves.</path.village.dwarves>
+            <path.village.dwarves.angry> They got really angry</path.village.dwarves.angry>
+            <path.village.dwarves.angry.died> and killed you.</path.village.dwarves.angry.died>
+            <path.village.dwarves.angry.escaped> but you managed to escape.</path.village.dwarves.angry.escaped>
+            <path.village.dwarves.cheerful> They were very cheerful</path.village.dwarves.cheerful>
+            <path.village.dwarves.cheerful.fun> and you had much fun together.</path.village.dwarves.cheerful.fun>
+            <path.village.dwarves.cheerful.work_hard> and you worked hard for the rest of your life.</path.village.dwarves.cheerful.work_hard>
+            <path.village.dwarves.cheerful.annoying>, they were really annoying and annoyed you for the rest of your life.</path.village.dwarves.cheerful.annoying>
+            <path.village.witch> owned by a witch.</path.village.witch>
+            <path.village.witch.bad> She was very evil</path.village.witch.bad>
+            <path.village.witch.bad.died> and killed you.</path.village.witch.bad.died>
+            <path.village.witch.bad.escaped> but you managed to escape.</path.village.witch.bad.escaped>
+            <path.village.witch.good> She was very good</path.village.witch.good>
+            <path.village.witch.good.learn_magic> and thought you how to use magic.</path.village.witch.good.learn_magic>
+            <path.village.witch.goodfight_evil> and together you fought evil.</path.village.witch.goodfight_evil>
+            <path.old_ruin> on which an old ruin was built.</path.old_ruin>
+            <path.old_ruin.cobweb> It was full of cobweb and spiders.</path.old_ruin.cobweb>
+            <path.old_ruin.snakes> The whole floor was covered with snakes.</path.old_ruin.snakes>
+            <path.old_ruin.gold> You found gold there.</path.old_ruin.gold>
+            <path.cottage> after following it, you stumbled upon a cottage.</path.cottage>
+            <path.cottage.old_man> An old man lived there</path.cottage.old_man>
+            <path.cottage.old_man.evil> he was very evil</path.cottage.old_man.evil>
+            <path.cottage.old_man.old_man_good> he was very good</path.cottage.old_man.old_man_good>
+            <path.cottage.abandoned> It was abandoned.</path.cottage.abandoned>
+            <path.cottage.overgrown> It was overgrown.</path.cottage.overgrown>
+        </localization>
+    </generator>
+    <generator id="town">
+        <item id="road">
+            <item id="nowhere"/>
+            <item id="dead_end"/>
+        </item>
+        <item id="building">
+            <item id="tall"/>
+            <item id="small"/>
+        </item>
+
+        <localization to="en" name="Town Generator">
+            <road>You followed a road</road>
+            <road.nowhere> it lead nowhere.</road.nowhere>
+            <road.dead_end> it lead to an dead end.</road.dead_end>
+            <building>You looked at an</building>
+            <building.tall> tall building.</building.tall>
+            <building.small> small building.</building.small>
+        </localization>
+    </generator>
+</paradox>

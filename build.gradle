@@ -27,6 +27,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'hr.caellian'
-version = "2.2.0"
+version = "3.0.0"
 
 jar.manifest.attributes 'Main-Class': 'hr.caellian.paradox.ParadoxGenerator'
+jar.manifest.attributes 'SplashScreen-Image': 'splash/splash.png'

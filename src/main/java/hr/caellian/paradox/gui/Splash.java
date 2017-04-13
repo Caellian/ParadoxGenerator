@@ -22,54 +22,40 @@
  * DEALINGS IN THE SOFTWARE.
  */
 
-package hr.caellian.core.GUI;
+package hr.caellian.paradox.gui;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.io.IOException;
-import java.net.URL;
 
 /**
  * Created on 21.4.2015. at 15:23.
  */
-public class SplashScreen extends JFrame {
-    //TODO:Add support for transparent pictures.
+public abstract class Splash extends JFrame {
 
-    public SplashScreen(URL image) {
-        this(image, null);
+    public Graphics2D g;
+    public SplashScreen splashScreen;
+
+    public Splash() {
+        splashScreen = SplashScreen.getSplashScreen();
+        if (splashScreen == null) {
+            System.err.println("Unable to initialize splash screen!");
+            return;
+        }
+
+        g = splashScreen.createGraphics();
+        g.setComposite(AlphaComposite.Clear);
+        setupGraphics(g);
     }
 
-    public SplashScreen(URL image, URL icon) throws HeadlessException {
-        try {
-            this.setContentPane(new JLabel(new ImageIcon(ImageIO.read(image))));
-        } catch (IOException e) {
-            System.err.println("Unable to set SPLASH screen image!");
-            e.printStackTrace();
-        }
-        if (icon != null) {
-            this.setIconImage(new ImageIcon(icon).getImage());
-        }
-        this.setResizable(false);
-        this.setUndecorated(true);
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.setTitle("SplashScreen");
-        this.pack();
-        this.setLocationRelativeTo(null);
+    public void close() {
+        if (splashScreen != null) splashScreen.close();
     }
 
-    public void showSplash() {
-        this.setOpacity(0);
-        this.setVisible(true);
-        for (float transparency = 0; transparency < 1; transparency += 0.0001) {
-            this.setOpacity(transparency);
-        }
+    public abstract void setupGraphics(Graphics2D g);
+
+    public void renderState(Object... state){
+        if (splashScreen != null) renderState(g, state);
     }
 
-    public void hideSplash() {
-        for (float transparency = 1; transparency > 0; transparency -= 0.01) {
-            this.setOpacity(transparency);
-        }
-        this.setVisible(false);
-    }
+    public abstract void renderState(Graphics2D g, Object... state);
 }

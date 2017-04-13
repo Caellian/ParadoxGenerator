@@ -24,34 +24,69 @@
 
 package hr.caellian.paradox.gui;
 
-import hr.caellian.core.versionControl.VersionData;
 import hr.caellian.paradox.lib.Reference;
 import hr.caellian.paradox.lib.Resources;
+import hr.caellian.paradox.util.Pointer;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.io.IOException;
-import java.net.URISyntaxException;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 /**
- * Created by tinsv on 2017-04-01.
+ * Created by tinsv on 2017-04-08.
  */
-public class Update extends JFrame {
-
-    private final VersionData newVersion;
+public class Preferences extends JFrame {
     private JPanel mainPanel = new JPanel(new GridBagLayout());
 
-    public Update(VersionData newVersion) {
-        super();
-        this.newVersion = newVersion;
+    private Preferences self;
 
+    public Preferences(Pointer<Boolean> settingsOpen) {
+        super(Reference.PROGRAM_NAME + " - Settings");
+        this.self = this;
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         this.initComponents();
         this.setContentPane(mainPanel);
         this.setIconImage(new ImageIcon(Resources.ICON).getImage());
-        this.setResizable(true);
         this.pack();
+        this.setResizable(false);
+        this.addWindowListener(new WindowListener() {
+            @Override
+            public void windowOpened(WindowEvent e) {
+                settingsOpen.to = true;
+            }
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+                settingsOpen.to = false;
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowIconified(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowDeiconified(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowActivated(WindowEvent e) {
+
+            }
+
+            @Override
+            public void windowDeactivated(WindowEvent e) {
+
+            }
+        });
         this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
@@ -59,42 +94,5 @@ public class Update extends JFrame {
     private void initComponents() {
         mainPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
         GridBagConstraints c = new GridBagConstraints();
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.gridx = 0;
-        c.gridy = 0;
-        c.weightx = 1;
-        c.fill = GridBagConstraints.HORIZONTAL;
-
-        String title = "[" + newVersion.version.toString() + "]";
-        if (newVersion.name.isPresent()) title += " - " + newVersion.name.get();
-        JLabel updateTitle = new JLabel(title);
-        mainPanel.add(updateTitle, c);
-
-        if (newVersion.changelog.isPresent()) {
-            JTextArea updateChangelog = new JTextArea(newVersion.changelog.get());
-            updateChangelog.setEditable(false);
-            c.gridy = 1;
-            c.weighty = 1;
-            c.fill = GridBagConstraints.BOTH;
-            mainPanel.add(new JScrollPane(updateChangelog), c);
-            c.fill = GridBagConstraints.HORIZONTAL;
-            c.weighty = 0;
-        }
-        if (newVersion.downloadLink.isPresent() && Desktop.isDesktopSupported()) {
-            JButton buttonDownload = new JButton("Download");
-            buttonDownload.addActionListener(e -> {
-                if (Desktop.isDesktopSupported()) {
-                    try {
-                        Desktop.getDesktop().browse(newVersion.downloadLink.get().toURI());
-                    } catch (IOException | URISyntaxException e1) {
-                        e1.printStackTrace();
-                    }
-                }
-            });
-
-            c.gridy = 2;
-            mainPanel.add(buttonDownload, c);
-        }
-
     }
 }

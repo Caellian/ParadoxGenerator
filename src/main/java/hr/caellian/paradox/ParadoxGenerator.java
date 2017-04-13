@@ -24,7 +24,7 @@
 
 package hr.caellian.paradox;
 
-import hr.caellian.core.GUI.SplashScreen;
+import hr.caellian.paradox.gui.Splash;
 import hr.caellian.core.configuration.Configuration;
 import hr.caellian.core.versionControl.VersionManager;
 import hr.caellian.paradox.configuration.Settings;
@@ -33,7 +33,10 @@ import hr.caellian.paradox.gui.Style;
 import hr.caellian.paradox.gui.Update;
 import hr.caellian.paradox.lib.Reference;
 import hr.caellian.paradox.lib.Resources;
-import hr.caellian.paradox.resource.StoredData;
+import hr.caellian.paradox.resource.ItemManager;
+
+import java.awt.*;
+import java.awt.geom.Rectangle2D;
 
 public class ParadoxGenerator {
     public static Configuration configuration;
@@ -41,25 +44,53 @@ public class ParadoxGenerator {
     public static void main(String[] args) {
         System.out.println(Reference.PROGRAM_NAME + ", Copyright (C) 2017. " + Reference.PROGRAM_AUTHOR);
 
-        SplashScreen splashScreen = new SplashScreen(Resources.SPLASH, Resources.ICON);
-        splashScreen.showSplash();
         Style.loadUIStyles();
 
-        initConfiguration();
+        Splash splash = new Splash() {
+            float percentOld = 0f;
+
+            @Override
+            public void setupGraphics(Graphics2D g) {
+                g.setBackground(new Color(30, 30, 30));
+                g.setPaintMode();
+                g.setColor(Style.NDark.STYLE_NIMBUS_FOCUS);
+            }
+
+            @Override
+            public void renderState(Graphics2D g, Object... state) {
+                float percentDone = (float) state[0];
+                String message = (String) state[1];
+
+                g.clearRect(25, 543, 350, 12);
+                g.drawString(message, 25, 553);
+
+                for (float i=0.0f; i<=1; i += 0.2f) {
+                    g.fill(new Rectangle2D.Double(25, 560, (int) (350 * (percentOld + (percentDone - percentOld) * i)), 5));
+                    splashScreen.update();
+                }
+                percentOld = percentDone;
+            }
+        };
+
+        splash.renderState(0.1f, "Loading configuration...");
+        handleConfiguration();
         if (Settings.CHECK_FOR_UPDATES) {
+            splash.renderState(0.3f, "Checking for updates...");
             VersionManager versionManager = new VersionManager(Resources.VERSIONS_FILE);
             versionManager.currentVersion = Reference.PROGRAM_VERSION;
             if (versionManager.updateAvailable()) {
                 Update updateNotifier = new Update(versionManager.getLatestVersion());
             }
         }
-        StoredData.initData();
+        splash.renderState(0.6f, "Refreshing data...");
+        ItemManager.refreshData();
 
+        splash.renderState(1f, "Opening GUI...");
         Generator generatorWindow = new Generator();
-        splashScreen.hideSplash();
+        splash.close();
     }
 
-    private static void initConfiguration() {
+    private static void handleConfiguration() {
         configuration = new Configuration(new Settings());
         configuration.loadConfig();
     }

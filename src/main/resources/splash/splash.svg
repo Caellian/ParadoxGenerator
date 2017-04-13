@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400"
+   height="600"
+   viewBox="0 0 105.83333 158.75"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="splash.svg"
+   inkscape:export-filename="E:\Projects\ParadoxGenerator\src\main\resources\splash\splash.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-138.24998)">
+    <path
+       style="fill:#002745;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 0,278.47915 49.388848,18.52082 56.444482,10e-6 v -7.93749 L 0,249.37499 Z"
+       id="path5975-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:#002745;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 105.83333,156.77081 56.444483,138.24999 0,138.24998 v 7.93749 l 105.83333,39.6875 z"
+       id="path5975-9-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:#002745;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 0,212.33331 105.83333,39.68751 V 222.91665 L 0,183.22915 Z"
+       id="path5975"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#1e1e1e;fill-opacity:1;stroke:#004fd6;stroke-width:2.13519931;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4502"
+       width="97.909958"
+       height="149.01729"
+       x="3.9616878"
+       y="143.11633" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.32291663px;font-family:'Terminal Greek 737 (437G)';-inkscape-font-specification:'Terminal Greek 737 (437G)';letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="4.9936686"
+       y="147.51613"
+       id="text6126"><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="147.51613"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6218">Can we talk a bit more about amazing things y</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="150.868"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6220">ou can do with Paradox Generator. It can gene</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="154.21986"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6222">rate random strings from input configuration</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="157.57172"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6386">files. They are quite easy to use and leave r</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="160.92358"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6390">oom for a lot of costumization. You can defin</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="164.27545"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6394">e your own templates which can be used for ge</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="167.62732"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6396">neration of random numbers, items from lists</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="170.97919"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6398">and such inside of localization. Localization</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="174.33104"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6400">allows you to write your text generation conf</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="177.68291"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6402">iguration only once and translate it to as ma</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="181.03477"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6404">ny languages as you like (and know). The enti</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="184.38664"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6406">re format using xml files is very straight fo</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="187.73849"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6408">rward and simple when you get to know it. All</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="191.09036"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6410">you need to do to learn how to use this progr</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="194.44223"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6412">am efficiently is go to the GitHub repository</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="197.7941"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6414">and run over the tutorial. It explains how to</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="201.14597"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6416">use and create your own generators, items, te</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="204.49782"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6418">mplates, functions and localization. Main goa</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="207.84969"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6420">l I had while writing this program was to kee</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="211.20155"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6422">p it as flexible as possible while not overco</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="214.55342"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6424">,plicating it by forcing users to enter big a</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="217.90529"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6428">mounts of data in order to do something very</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="221.25714"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6432">simple and straightforward. Random function f</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="224.60901"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6438">or example allows you to generate random inte</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="227.96088"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6440">gers, floats, years (which adds BC suffix if</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="231.31274"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6442">generated year is negative), dice rolls and o</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="234.6646"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6444">ne of the most useful features is random enum</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="238.01646"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6446">eration which picks a random child item. All</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="241.36833"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6450">items can also have custom weight which gives</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="244.7202"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6454">you more control over how things are generate</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="248.07207"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6456">d. If you read this entire text, I congradula</tspan><tspan
+         sodipodi:role="line"
+         x="4.9936686"
+         y="251.42392"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777767px;line-height:1.32291663px;font-family:'OCR A Extended';-inkscape-font-specification:'OCR A Extended';writing-mode:lr-tb;text-orientation:sideways;fill:#2f2f2f;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6458">te you on wasting your time!</tspan></text>
+    <path
+       style="fill:#0092ff;fill-opacity:1;stroke:none;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 400 70 L 0 170 L 0 280 L 400 180 L 400 70 z M 360.76172 120.94922 C 362.04698 120.9092 363.19189 121.1623 364.19531 121.70508 C 365.98596 122.67797 367.16024 124.20662 367.71875 126.29102 C 368.28827 128.41649 367.8829 130.44471 366.50391 132.37695 L 372.25977 140.12891 L 366.01172 141.80273 L 361.30664 135.79883 L 359.85938 130.39453 L 360.32812 130.26758 C 361.57961 129.93224 362.0546 129.19979 361.75195 128.07031 C 361.48508 127.07432 360.62672 126.77047 359.17969 127.1582 L 358.125 127.44141 L 362.24219 142.8125 L 356.28906 144.4082 L 350.65625 123.38477 L 358.29688 121.33594 C 359.16949 121.10212 359.99056 120.97323 360.76172 120.94922 z M 337.66406 126.79297 C 339.38205 126.87688 341.05388 127.4282 342.68164 128.44336 C 345.29583 130.065 347.00752 132.38356 347.81641 135.40234 C 348.63904 138.47246 348.31607 141.35526 346.84766 144.04883 C 345.37923 146.74237 343.18316 148.48035 340.25977 149.26367 C 337.35593 150.04175 334.58998 149.62761 331.95898 148.02148 C 329.32799 146.41536 327.60424 144.08865 326.78711 141.03906 C 325.96171 137.95865 326.29443 135.07327 327.78516 132.38477 C 329.28566 129.69362 331.5316 127.94814 334.52344 127.14648 C 335.58671 126.86158 336.63327 126.74262 337.66406 126.79297 z M 320.10742 131.57031 L 321.72656 137.60742 L 317.17969 138.82422 L 321.19531 153.81055 L 315.24023 155.40625 L 311.22461 140.41992 L 306.66406 141.64258 L 305.04688 135.60547 L 320.10742 131.57031 z M 336.91797 133.23438 C 336.618 133.25147 336.31384 133.30224 336.00586 133.38477 C 334.7837 133.71224 333.86899 134.46347 333.26172 135.63867 C 332.65444 136.81385 332.52905 138.06945 332.88672 139.4043 C 333.24438 140.73912 333.98023 141.76244 335.09375 142.47656 C 336.21705 143.18806 337.38528 143.3815 338.59766 143.05664 C 339.82959 142.72655 340.74545 141.98067 341.3457 140.81836 C 341.95298 139.64315 342.07722 138.38221 341.7168 137.03711 C 341.35638 135.69201 340.62053 134.66869 339.50977 133.96484 C 338.68196 133.42729 337.81788 133.18309 336.91797 133.23438 z M 295.82812 137.80859 C 297.09016 137.79801 298.18044 138.10569 299.10156 138.73242 C 300.5726 139.72489 301.67209 141.57635 302.39844 144.28711 L 306.03906 157.87305 L 300.08398 159.46875 L 296.55469 146.29883 C 296.33458 145.47738 296.08942 144.93259 295.81836 144.66406 C 295.5473 144.39553 295.17244 144.32475 294.69336 144.45312 C 293.76452 144.70201 293.49603 145.55561 293.88672 147.01367 L 294.58789 149.63281 L 296.30469 149.17383 L 297.78906 154.7168 L 296.07422 155.17773 L 297.41406 160.18359 L 291.46094 161.7793 L 287.87891 148.41016 C 287.18558 145.82261 287.31639 143.63578 288.27344 141.84961 C 289.23752 140.05057 290.93656 138.82421 293.37109 138.17188 C 294.25105 137.93609 295.0709 137.81494 295.82812 137.80859 z M 275.55664 143.78125 C 276.8419 143.74123 277.98681 143.99238 278.99023 144.53516 C 280.78088 145.50804 281.95516 147.0367 282.51367 149.12109 C 283.08319 151.24657 282.67782 153.27478 281.29883 155.20703 L 287.05469 162.95898 L 280.80664 164.63281 L 276.10156 158.63086 L 274.65234 153.22461 L 275.12305 153.09961 C 276.37453 152.76427 276.84757 152.03183 276.54492 150.90234 C 276.27805 149.90635 275.42164 149.60055 273.97461 149.98828 L 272.91797 150.27148 L 277.03711 165.64258 L 271.08398 167.23828 L 265.44922 146.21484 L 273.08984 144.16797 C 273.96246 143.93415 274.78548 143.80526 275.55664 143.78125 z M 259.18164 147.89453 L 260.79883 153.93164 L 257 154.94922 C 255.97339 155.2243 255.55314 155.71192 255.74023 156.41016 C 255.85028 156.82087 256.04944 157.07503 256.33789 157.17383 C 256.62356 157.26222 257.07933 157.22235 257.70508 157.05469 L 260.99023 156.17578 L 262.24609 160.85742 L 258.35938 161.89844 C 257.83141 162.03991 257.47771 162.22264 257.29688 162.44727 C 257.12582 162.66927 257.09078 162.97708 257.19531 163.36719 C 257.31362 163.8087 257.50613 164.07082 257.76953 164.1543 C 258.03017 164.22748 258.507 164.17038 259.20117 163.98438 L 263.20508 162.91211 L 264.81445 168.91797 L 260.13672 170.17188 C 257.93684 170.76133 256.10632 170.66192 254.64844 169.875 C 253.18781 169.07783 252.17961 167.63716 251.62109 165.55273 L 249.41211 157.3125 C 248.87285 155.29996 249.00287 153.59375 249.80078 152.19141 C 250.60847 150.78641 252.00935 149.81569 254.00391 149.28125 L 259.18164 147.89453 z M 236.9082 153.61719 C 238.15771 153.63318 239.27258 153.97736 240.25195 154.65039 C 241.82873 155.72459 242.96638 157.57111 243.66797 160.18945 L 247.26758 173.62109 L 241.3125 175.21484 L 237.71484 161.78516 C 237.37093 160.50166 236.76275 159.97582 235.89258 160.20898 C 235.05174 160.43429 234.80453 161.18916 235.14844 162.47266 L 238.74609 175.90234 L 232.79297 177.49805 L 229.13477 163.85352 C 228.49371 161.46106 228.66092 159.36224 229.63477 157.56055 C 230.6184 155.75626 232.24535 154.55115 234.51367 153.94336 C 235.36062 153.71642 236.1585 153.60759 236.9082 153.61719 z M 221.30078 158.04492 L 222.91797 164.08203 L 219.11914 165.09961 C 218.09253 165.37469 217.67423 165.86231 217.86133 166.56055 C 217.97138 166.97126 218.17053 167.22542 218.45898 167.32422 C 218.74465 167.41261 219.20043 167.37275 219.82617 167.20508 L 223.11133 166.32617 L 224.36523 171.00781 L 220.47852 172.04883 C 219.95054 172.1903 219.59685 172.37304 219.41602 172.59766 C 219.24496 172.81966 219.21188 173.12551 219.31641 173.51562 C 219.43471 173.95714 219.62528 174.2212 219.88867 174.30469 C 220.1493 174.37787 220.62613 174.32077 221.32031 174.13477 L 225.32422 173.0625 L 226.93359 179.06836 L 222.25586 180.32227 C 220.05598 180.91172 218.22741 180.81231 216.76953 180.02539 C 215.3089 179.22822 214.29875 177.78755 213.74023 175.70312 L 211.53125 167.46289 C 210.99199 165.45035 211.12201 163.74414 211.91992 162.3418 C 212.72761 160.9368 214.12849 159.96608 216.12305 159.43164 L 221.30078 158.04492 z M 200.25977 163.50195 C 200.56812 163.50393 200.88795 163.51633 201.2168 163.54102 L 202.89062 169.79492 C 201.8282 169.58435 200.91107 169.5821 200.13867 169.78906 C 198.74053 170.16369 197.71908 170.92781 197.07422 172.08008 C 196.43913 173.2297 196.3183 174.53412 196.70898 175.99219 C 197.10792 177.48105 197.83352 178.55041 198.88867 179.20312 C 199.94381 179.85582 201.17021 179.99573 202.56836 179.62109 C 203.45809 179.38269 203.83137 178.99147 203.68555 178.44727 C 203.5755 178.03655 203.22726 177.90922 202.64062 178.06641 L 201.2168 178.44727 L 199.9375 173.67383 L 205.61328 172.15234 C 207.26188 173.41639 208.32365 174.93115 208.79688 176.69727 C 209.34713 178.75086 209.09042 180.66963 208.02734 182.45117 C 206.97405 184.23012 205.40092 185.4003 203.30859 185.96094 C 200.59052 186.68924 197.99294 186.22277 195.51562 184.56445 C 193.03832 182.90616 191.38248 180.52138 190.54883 177.41016 C 189.71243 174.28869 189.97925 171.43397 191.34961 168.84375 C 192.72974 166.25088 194.86766 164.56648 197.76172 163.79102 C 198.50234 163.59257 199.33469 163.49602 200.25977 163.50195 z M 174.13867 170.68164 L 171.67188 182.30469 L 179.94727 191.6582 L 173.68555 193.33594 L 169.85547 188.89844 L 169.13867 194.55469 L 162.97852 196.20508 L 165.63086 184.10352 L 157.63867 175.10352 L 163.84375 173.43945 L 167.45508 177.58984 L 168.05273 172.3125 L 174.13867 170.68164 z M 147.36133 177.78516 C 149.07931 177.86907 150.75115 178.41843 152.37891 179.43359 C 154.9931 181.05523 156.70479 183.37575 157.51367 186.39453 C 158.33631 189.46465 158.01334 192.34745 156.54492 195.04102 C 155.0765 197.73456 152.88043 199.47254 149.95703 200.25586 C 147.05319 201.03394 144.28724 200.61979 141.65625 199.01367 C 139.02526 197.40755 137.30151 195.07889 136.48438 192.0293 C 135.65898 188.94888 135.98974 186.06546 137.48047 183.37695 C 138.98097 180.6858 141.22887 178.93838 144.2207 178.13672 C 145.28398 177.85182 146.33054 177.73481 147.36133 177.78516 z M 146.61523 184.22656 C 146.31526 184.24366 146.01111 184.29248 145.70312 184.375 C 144.48097 184.70248 143.56626 185.45565 142.95898 186.63086 C 142.3517 187.80604 142.22631 189.05968 142.58398 190.39453 C 142.94165 191.72936 143.6775 192.75463 144.79102 193.46875 C 145.91431 194.18025 147.08255 194.37368 148.29492 194.04883 C 149.52685 193.71873 150.44272 192.97286 151.04297 191.81055 C 151.65024 190.63534 151.77448 189.3744 151.41406 188.0293 C 151.05364 186.68419 150.3178 185.65892 149.20703 184.95508 C 148.37922 184.41752 147.51515 184.17527 146.61523 184.22656 z M 122.50781 185.16797 C 123.94864 185.21661 125.25904 185.51719 126.43945 186.07031 C 129.24732 187.39794 131.09686 189.72592 131.98828 193.05273 C 132.84118 196.23581 132.55877 199.09631 131.14258 201.63281 C 129.72638 204.16929 127.47827 205.84859 124.39844 206.67383 C 124.03668 206.77076 123.43974 206.90898 122.60742 207.08789 L 120.95312 200.91211 L 121.90625 200.65625 C 125.37717 199.72622 126.70386 197.73711 125.88672 194.6875 C 125.11911 191.82273 123.02944 190.84741 119.61719 191.76172 L 117.60742 192.30078 L 121.62305 207.28711 L 115.66797 208.88281 L 110.03516 187.85742 L 117.79297 185.7793 C 119.49421 185.32345 121.06699 185.11933 122.50781 185.16797 z M 99.013672 190.54492 C 100.27571 190.53434 101.36598 190.84202 102.28711 191.46875 C 103.75815 192.46122 104.85764 194.31268 105.58398 197.02344 L 109.22461 210.60938 L 103.26953 212.20508 L 99.740234 199.03516 C 99.520127 198.2137 99.274965 197.66892 99.003906 197.40039 C 98.732848 197.13186 98.357989 197.06108 97.878906 197.18945 C 96.950069 197.43833 96.681579 198.29194 97.072266 199.75 L 97.773438 202.36914 L 99.490234 201.91016 L 100.97461 207.45312 L 99.259766 207.91406 L 100.59961 212.91992 L 94.646484 214.51562 L 91.064453 201.14648 C 90.371122 198.55894 90.501937 196.37211 91.458984 194.58594 C 92.423063 192.78689 94.122109 191.56053 96.556641 190.9082 C 97.436591 190.67242 98.256449 190.55127 99.013672 190.54492 z M 78.742188 196.51758 C 80.027448 196.47756 81.172359 196.72871 82.175781 197.27148 C 83.966431 198.24437 85.140706 199.77302 85.699219 201.85742 C 86.268738 203.9829 85.863368 206.01111 84.484375 207.94336 L 90.240234 215.69531 L 83.992188 217.36914 L 79.287109 211.36719 L 77.837891 205.96094 L 78.308594 205.83594 C 79.56008 205.5006 80.033113 204.76815 79.730469 203.63867 C 79.463593 202.64268 78.607187 202.33688 77.160156 202.72461 L 76.103516 203.00781 L 80.222656 218.37891 L 74.269531 219.97461 L 68.634766 198.95117 L 76.275391 196.9043 C 77.148009 196.67048 77.971031 196.54159 78.742188 196.51758 z M 57.613281 201.63867 C 58.875319 201.62809 59.965592 201.93577 60.886719 202.5625 C 62.357759 203.55497 63.457249 205.40643 64.183594 208.11719 L 67.824219 221.70117 L 61.869141 223.29688 L 58.341797 210.12891 C 58.121689 209.30745 57.874574 208.76267 57.603516 208.49414 C 57.332457 208.22561 56.957598 208.15483 56.478516 208.2832 C 55.549678 208.53208 55.281188 209.38569 55.671875 210.84375 L 56.373047 213.46289 L 58.089844 213.00195 L 59.574219 218.54688 L 57.859375 219.00781 L 59.201172 224.01172 L 53.246094 225.60742 L 49.664062 212.23828 C 48.970732 209.65074 49.101546 207.46391 50.058594 205.67773 C 51.022672 203.87869 52.721718 202.65428 55.15625 202.00195 C 56.036201 201.76617 56.856059 201.64502 57.613281 201.63867 z M 37.597656 207.03125 C 38.80544 207.06873 39.960143 207.42227 41.0625 208.08984 C 42.836054 209.15537 44.006652 210.74952 44.576172 212.875 C 45.129184 214.93887 44.958344 216.78027 44.060547 218.39648 C 43.242785 219.88119 41.690217 220.92993 39.402344 221.54297 L 38.488281 221.77148 L 37.009766 216.25586 C 38.212364 215.93362 38.684404 215.29136 38.425781 214.32617 C 38.189166 213.44311 37.612419 213.12483 36.693359 213.37109 C 35.764522 213.61997 35.462458 214.34893 35.787109 215.56055 L 39.46875 229.29883 L 33.513672 230.89453 L 30.005859 217.80273 C 29.642687 216.44736 29.472994 215.30562 29.496094 214.375 C 29.526218 213.43148 29.752838 212.50122 30.177734 211.58398 C 30.65884 210.56366 31.362431 209.66983 32.289062 208.9043 C 33.215691 208.13876 34.242804 207.60597 35.367188 207.30469 C 36.129811 207.10034 36.872986 207.00876 37.597656 207.03125 z "
+       transform="matrix(0.26458333,0,0,0.26458333,0,138.24998)"
+       id="path4485-7" />
+    <path
+       style="fill:#0092ff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0,278.47915 105.83333,252.02082 V 222.91665 L 0,249.37499 Z"
+       id="path4485-7-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#0092ff;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="M 105.83333,138.24998 H 0 v 7.93749 h 105.83333 z"
+       id="path6009"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <g
+       aria-label="PARADOX GENERATOR"
+       transform="matrix(0.94255968,-0.25255811,0.26523519,0.98987122,0,0)"
+       style="font-style:normal;font-weight:normal;font-size:8.43122864px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f5f5f5;fill-opacity:1;stroke:none;stroke-width:0.21078074"
+       id="text4506" />
+    <path
+       style="fill:#0092ff;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 105.83333,289.06249 H 3e-6 v 7.93749 H 105.83333 Z"
+       id="path6009-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Terminal Greek 737 (437G)';-inkscape-font-specification:'Terminal Greek 737 (437G)';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="1.3096207"
+       y="162.85741"
+       id="text6186"><tspan
+         sodipodi:role="line"
+         id="tspan6184"
+         x="1.3096207"
+         y="172.51291"
+         style="stroke-width:0.26458332" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.6658504px;line-height:1.25;font-family:'Terminal Greek 737 (437G)';-inkscape-font-specification:'Terminal Greek 737 (437G)';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.09164625"
+       x="11.687484"
+       y="294.48648"
+       id="text6436"><tspan
+         sodipodi:role="line"
+         id="tspan6434"
+         x="11.687484"
+         y="294.48648"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Verdana;-inkscape-font-specification:Verdana;fill:#ffffff;fill-opacity:1;stroke-width:0.09164625">Copyright © 2017. Tin Švagelj - MIT License</tspan></text>
+    <path
+       style="fill:#2f2f2f;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 6.6145833,287.73956 92.6041667,0 v -1.32291 l -92.6041667,4e-5 z"
+       id="path4528"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+</svg>

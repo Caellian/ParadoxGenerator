@@ -1,0 +1,22 @@
+<paradox>
+    <generator id="age_template">
+        <item id="age_message"/>
+        <localization to="en" name="Age Template">
+            <age_message>A random age is ${age}.
+A random child age is ${age.child}.
+A random teenager age is ${age.teenager}.
+A random adolescent age is ${age.adolescent}.
+A random adult age is ${age.adult}.
+A random old age is ${age.old}.</age_message>
+        </localization>
+    </generator>
+
+    <generator id="tnd_template">
+        <item id="tnd_message"/>
+        <localization to="en" name="Time &amp; Date Template">
+            <tnd_message>Current year is ${year.now} and time is ${time.now.long}.
+Note that template links depend on your system configuration.
+            </tnd_message>
+        </localization>
+    </generator>
+</paradox>

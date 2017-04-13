@@ -1,0 +1,187 @@
+<!--
+  ~ The MIT License (MIT)
+  ~ Paradox Generator, random sentence generator.
+  ~ Copyright (c) 2017 Tin Švagelj <tin.svagelj@live.com> a.k.a. Caellian
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a
+  ~ copy of this software and associated documentation files (the "Software"),
+  ~ to deal in the Software without restriction, including without limitation
+  ~ the rights to use, copy, modify, merge, publish, distribute, sublicense,
+  ~ and/or sell copies of the Software, and to permit persons to whom the
+  ~ Software is furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+  ~ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  ~ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+  ~ DEALINGS IN THE SOFTWARE.
+  -->
+
+<!-- http://chancejs.com -->
+
+<paradox>
+    <!-- Common -->
+    <template id="age" function="random" type="int" min="1" max="100">
+        <template id="child" function="random" type="int" min="1" max="12"/>
+        <template id="teenager" function="random" type="int" min="13" max="19"/>
+        <template id="adolescent" function="random" type="int" min="20" max="30"/>
+        <template id="adult" function="random" type="int" min="31" max="60"/>
+        <template id="old" function="random" type="int" min="61" max="100"/>
+    </template>
+
+    <!-- Year -->
+    <template id="year" function="random" type="year" min="0" max="${year.today}">
+        <template id="now" function="link"/>
+    </template>
+
+    <!-- Month -->
+    <template id="month" function="random" type="enum">
+        <template id="now" function="link"/>
+        <template id="numeric" function="random" type="int" min="1" max="12"/>
+        <item id="january"/>
+        <item id="february"/>
+        <item id="march"/>
+        <item id="april"/>
+        <item id="may"/>
+        <item id="june"/>
+        <item id="july"/>
+        <item id="august"/>
+        <item id="september"/>
+        <item id="november"/>
+        <item id="october"/>
+        <item id="december"/>
+        <template id="short" function="random" type="enum">
+            <item id="january"/>
+            <item id="february"/>
+            <item id="march"/>
+            <item id="april"/>
+            <item id="may"/>
+            <item id="june"/>
+            <item id="july"/>
+            <item id="august"/>
+            <item id="september"/>
+            <item id="november"/>
+            <item id="october"/>
+            <item id="december"/>
+        </template>
+    </template>
+
+    <!-- Day -->
+    <template id="day" function="random" type="enum">
+        <template id="now" function="link"/>
+        <template id="numeric" function="random" type="int" min="1" max="31"/>
+        <item id="monday"/>
+        <item id="tuesday"/>
+        <item id="wednesday"/>
+        <item id="thursday"/>
+        <item id="friday"/>
+        <item id="saturday"/>
+        <item id="sunday"/>
+        <template id="short" function="random" type="enum">
+            <item id="monday"/>
+            <item id="tuesday"/>
+            <item id="wednesday"/>
+            <item id="thursday"/>
+            <item id="friday"/>
+            <item id="saturday"/>
+            <item id="sunday"/>
+        </template>
+    </template>
+
+    <!-- Time -->
+    <template id="time" function="append" separator=" ">
+        <template id="now" function="link">
+            <template id="long" function="link"/>
+        </template>
+        <template id="hour" function="random" type="int" min="1" max="12">
+            <template id="meridiem" function="random" type="enum">
+                <item id="am" name="AM"/>
+                <item id="pm" name="PM"/>
+            </template>
+        </template>
+        <template id="minute" function="random" type="int" min="1" max="60"/>
+        <template id="second" function="random" type="int" min="1" max="60"/>
+        <function function="append" separator=":">
+            <function function="random" type="int" min="1" max="12"/>
+            <function function="random" type="int" min="1" max="60"/>
+            <function function="random" type="int" min="1" max="60"/>
+        </function>
+        <function function="random" type="enum">
+            <item id="am" name="AM"/>
+            <item id="pm" name="PM"/>
+        </function>
+    </template>
+
+    <!-- Gender -->
+    <template id="gender" function="random" type="enum">
+        <item id="male"/>
+        <item id="female"/>
+    </template>
+
+    <!-- Dice -->
+    <template id="d4" function="random" type="dice" roll="d4"/>
+    <template id="d6" function="random" type="dice" roll="d6"/>
+    <template id="d8" function="random" type="dice" roll="d8"/>
+    <template id="d10" function="random" type="dice" roll="d10"/>
+    <template id="d12" function="random" type="dice" roll="d12"/>
+    <template id="d20" function="random" type="dice" roll="d20"/>
+    <template id="d100" function="random" type="dice" roll="d100"/>
+
+    <localization to="en">
+        <month.january>January</month.january>
+        <month.february>February</month.february>
+        <month.march>March</month.march>
+        <month.april>April</month.april>
+        <month.may>May</month.may>
+        <month.june>June</month.june>
+        <month.july>July</month.july>
+        <month.august>August</month.august>
+        <month.september>September</month.september>
+        <month.november>November</month.november>
+        <month.october>October</month.october>
+        <month.december>December</month.december>
+
+        <month.short.january>Jan</month.short.january>
+        <month.short.february>Feb</month.short.february>
+        <month.short.march>Mar</month.short.march>
+        <month.short.april>Apr</month.short.april>
+        <month.short.may>May</month.short.may>
+        <month.short.june>Jun</month.short.june>
+        <month.short.july>Jul</month.short.july>
+        <month.short.august>Aug</month.short.august>
+        <month.short.september>Sep</month.short.september>
+        <month.short.november>Nov</month.short.november>
+        <month.short.october>Oct</month.short.october>
+        <month.short.december>Dec</month.short.december>
+
+        <day.monday>Monday</day.monday>
+        <day.tuesday>Tuesday</day.tuesday>
+        <day.wednesday>Wednesday</day.wednesday>
+        <day.thursday>Thursday</day.thursday>
+        <day.friday>Friday</day.friday>
+        <day.saturday>Saturday</day.saturday>
+        <day.sunday>Sunday</day.sunday>
+
+        <day.short.monday>Mon</day.short.monday>
+        <day.short.tuesday>Tue</day.short.tuesday>
+        <day.short.wednesday>Wed</day.short.wednesday>
+        <day.short.thursday>Thu</day.short.thursday>
+        <day.short.friday>Fri</day.short.friday>
+        <day.short.saturday>Sat</day.short.saturday>
+        <day.short.sunday>Sun</day.short.sunday>
+
+        <address.none> </address.none>
+        <address.north>North </address.north>
+        <address.west>West </address.west>
+        <address.south>South </address.south>
+        <address.east>East </address.east>
+
+        <gender.male>male</gender.male>
+        <gender.female>female</gender.female>
+    </localization>
+</paradox>

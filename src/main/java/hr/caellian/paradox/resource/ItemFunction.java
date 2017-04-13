@@ -24,15 +24,32 @@
 
 package hr.caellian.paradox.resource;
 
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
 
-public class StoredData {
-    public static final ArrayList<String> sources = new ArrayList<>();
-    public static final HashMap<String, ArrayList<String>> data = new HashMap<>();
-    public static final HashMap<String, String> strings = new HashMap<>();
+public class ItemFunction extends ItemTemplate {
+    public ItemFunction(Item parent, Node origin, LinkedList<Item> data) {
+        super(parent, origin, data);
+    }
 
-    public static void initData() {
-        DataReader.importSources();
+    public ItemFunction(Item parent, Node origin, ArrayList<Item> data) {
+        super(parent, origin, data);
+    }
+
+    public ItemFunction(Item parent, Node origin, LinkedHashMap<Item, Float> data) {
+        super(parent, origin, data);
+    }
+
+    public ItemFunction(Item parent, Node origin, HashMap<Item, Float> data) {
+        super(parent, origin, data);
+    }
+
+    public String getNestedID() {
+        return (parent != null && !(parent instanceof ItemGenerator)) ? parent.getNestedID() : "";
     }
 }

@@ -33,7 +33,13 @@ import hr.caellian.core.configuration.IConfiguration;
  */
 public class Settings implements IConfiguration {
     @ConfigData
-    public static String GENERATOR_SOURCE = "https://raw.githubusercontent.com/Caellian/Paradox_Generator/master/Example.xml";
+    public static String GENERATOR_SOURCE = "https://raw.githubusercontent.com/Caellian/Paradox_Generator/master/examples/Strings.xml";
+
+    @ConfigData
+    public static String LIBRARIES = "https://raw.githubusercontent.com/Caellian/Paradox_Generator/master/library/Standard.xml";
+
+    @ConfigData
+    public static String LOCALIZATION = "en";
 
     @ConfigData
     public static Boolean CHECK_FOR_UPDATES = true;

@@ -22,38 +22,38 @@
  * DEALINGS IN THE SOFTWARE.
  */
 
-package hr.caellian.paradox.util;
+package hr.caellian.paradox.resource;
 
-import hr.caellian.paradox.resource.StoredData;
+import org.w3c.dom.Node;
 
 import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Random;
+import java.util.HashMap;
+import java.util.LinkedList;
 
 /**
- * Created by Caellian on 30.6.2015., at 1:56.
+ * Created by tinsv on 2017-04-09.
  */
-public class StringManagement {
-    public static String generate(ArrayList<String> values) {
-        return idToText(getRandom(values, "").split(" "));
+public class ItemGenerator extends Item{
+    // Localization -> (ID -> Text)
+    public final HashMap<String, HashMap<String, String>> localizations = new HashMap<>();
+    public final String source;
+
+
+    public ItemGenerator(Node origin, String source){
+        super(null, origin, new LinkedList<>());
+        this.source = source;
+        ItemManager.generators.add(this);
     }
 
-    public static String getRandom(ArrayList<String> values, String built) {
-        if (values != null && values.size() >= 1) {
-            Random random = new Random();
-            int rndNumber = random.nextInt(values.size());
-            //noinspection SuspiciousMethodCalls
-            return getRandom(StoredData.data.get(values.toArray()[rndNumber]), built + values.toArray()[rndNumber] + " ");
+    public String getText(String localization) {
+        return getText(localization, this);
+    }
+
+    public String getText(String localization, ItemGenerator generator) {
+        if (!this.localizations.get(localization).containsKey(getNestedID())) {
+            return ItemManager.publicLocalizations.get(localization).getOrDefault(getNestedID(), getNestedID());
         } else {
-            return Objects.equals(built, "") ? "" : built.substring(0, built.length() - 1);
+            return this.localizations.get(localization).getOrDefault(getNestedID(), getNestedID());
         }
-    }
-
-    public static String idToText(String[] generated) {
-        StringBuilder result = new StringBuilder();
-        for (String key : generated) {
-            result.append(StoredData.strings.get(key)).append(" ");
-        }
-        return result.substring(0, result.length() - 1);
     }
 }

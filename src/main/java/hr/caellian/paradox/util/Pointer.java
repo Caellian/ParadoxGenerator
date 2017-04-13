@@ -24,6 +24,8 @@
 
 package hr.caellian.paradox.util;
 
+import java.util.Optional;
+
 /**
  * Created by tinsv on 2017-03-31.
  */
@@ -32,5 +34,9 @@ public class Pointer<T> {
 
     public Pointer(T to) {
         this.to = to;
+    }
+
+    public boolean isNull() {
+        return to == null || ((to instanceof Optional) && !((Optional) to).isPresent());
     }
 }

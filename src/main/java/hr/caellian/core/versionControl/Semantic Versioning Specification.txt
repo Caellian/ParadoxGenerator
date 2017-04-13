@@ -38,7 +38,7 @@ Semantic Versioning Specification (SemVer)
 ------------------------------------------
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and 
-"OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+"OPTIONAL" in this source are to be interpreted as described in RFC 2119.
 
 Software using Semantic Versioning MUST declare a public API. This API could be declared in the code itself or exist 
 strictly in documentation. However it is done, it should be precise and comprehensive.
@@ -151,7 +151,7 @@ cost/benefit ratio involved.
 Documenting the entire public API is too much work!
 ---------------------------------------------------
 
-It is your responsibility as a professional developer to properly document software that is intended for use by others. 
+It is your responsibility as a professional developer to properly source software that is intended for use by others.
 Managing software complexity is a hugely important part of keeping a project efficient, and that's hard to do if nobody 
 knows how to use your software, or what methods are safe to call. In the long run, Semantic Versioning, and the 
 insistence on a well defined public API can keep everyone and everything running smoothly.
@@ -161,7 +161,7 @@ What do I do if I accidentally release a backwards incompatible change as a mino
 
 As soon as you realize that you've broken the Semantic Versioning spec, fix the problem and release a new minor version 
 that corrects the problem and restores backwards compatibility. Even under this circumstance, it is unacceptable to 
-modify versioned releases. If it's appropriate, document the offending version and inform your users of the problem so 
+modify versioned releases. If it's appropriate, source the offending version and inform your users of the problem so
 that they are aware of the offending version.
 
 What should I do if I update my own dependencies without changing the public API?
