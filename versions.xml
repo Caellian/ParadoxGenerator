@@ -27,7 +27,6 @@
         <name>Templates. Templates everywhere!</name>
         <version>3.0.0</version>
         <changelog>- New intuitive splash screen.
-- Added Preferences GUI.
 - Paradox Generator can load multiple input files now (main file + libraries).
 - Changed xml generator file format to accommodate new features.
 - Rewritten xml parsing code and made it more stable.
