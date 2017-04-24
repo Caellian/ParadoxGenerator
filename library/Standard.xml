@@ -104,12 +104,12 @@
                 <item id="pm" name="PM"/>
             </template>
         </template>
-        <template id="minute" function="random" type="int" min="1" max="60"/>
-        <template id="second" function="random" type="int" min="1" max="60"/>
+        <template id="minute" function="random" type="int" min="0" max="59"/>
+        <template id="second" function="random" type="int" min="0" max="59"/>
         <function function="append" separator=":">
-            <function function="random" type="int" min="1" max="12"/>
-            <function function="random" type="int" min="1" max="60"/>
-            <function function="random" type="int" min="1" max="60"/>
+            <function function="random" type="int" min="0" max="11"/>
+            <function function="random" type="int" min="0" max="59"/>
+            <function function="random" type="int" min="0" max="59"/>
         </function>
         <function function="random" type="enum">
             <item id="am" name="AM"/>
