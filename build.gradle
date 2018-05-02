@@ -22,12 +22,46 @@
  * DEALINGS IN THE SOFTWARE.
  */
 
-apply plugin: 'java'
-apply plugin: 'idea'
-apply plugin: 'eclipse'
+buildscript {
+    ext.kotlin_version = '1.2.31'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+group 'hr.caellian'
+version '1.0.0'
+
+apply plugin: 'kotlin'
+
+repositories {
+    mavenCentral()
+}
 
 group = 'hr.caellian'
 version = "3.0.0"
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    compile "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.+"
+    compile "com.fasterxml.jackson.core:jackson-databind:2.+"
+    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.+"
+    compile "org.apache.commons:commons-lang3:3.+"
+
+    compile 'com.google.guava:guava:24.1-jre'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
 
 jar.manifest.attributes 'Main-Class': 'hr.caellian.paradox.ParadoxGenerator'
 jar.manifest.attributes 'SplashScreen-Image': 'splash/splash.png'

@@ -1,7 +1,7 @@
 /*
  * The MIT License (MIT)
  * Paradox Generator, random sentence generator.
- * Copyright (c) 2017 Tin Švagelj <tin.svagelj@live.com> a.k.a. Caellian
+ * Copyright (c) 2018 Tin Švagelj <tin.svagelj@live.com> a.k.a. Caellian
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -22,33 +22,18 @@
  * DEALINGS IN THE SOFTWARE.
  */
 
-package hr.caellian.core.util;
+package hr.caellian.paradox.lib
 
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
+import com.fasterxml.jackson.module.kotlin.KotlinModule
 
-import java.util.ArrayList;
+object Constants {
+    const val ProgramAuthor = "Caellian"
+    const val ProgramName = "Paradox Generator"
+    const val Version = "1.0.0"
 
-/**
- * Convenience class created to make Nodes from {@code org.w3c.dom.Node} easier to use.
- * <p>
- *
- * @author Caellian
- */
-public class IterableNodeList extends ArrayList<Node> implements NodeList {
-    public IterableNodeList(NodeList nodeList) {
-        for (int node = 0; node < nodeList.getLength(); node++) {
-            super.add(node, nodeList.item(node));
-        }
-    }
+    const val NullId = "<null>"
 
-    @Override
-    public Node item(int index) {
-        return super.get(index);
-    }
-
-    @Override
-    public int getLength() {
-        return super.size();
-    }
+    val Mapper = ObjectMapper(YAMLFactory()).registerModule(KotlinModule())
 }

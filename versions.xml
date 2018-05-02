@@ -24,6 +24,14 @@
 
 <versions>
     <version>
+        <name>Kotlin! YAML! Brand new day...</name>
+        <version>4.0.0</version>
+        <changelog>- Migrated whole code to Kotlin.
+- Switched to YAML from XML files - it's nicer :)
+        </changelog>
+        <download>https://github.com/Caellian/ParadoxGenerator/releases/download/4.0.0/ParadoxGenerator-4.0.0.jar</download>
+    </version>
+    <version>
         <name>Templates. Templates everywhere!</name>
         <version>3.0.0</version>
         <changelog>- New intuitive splash screen.

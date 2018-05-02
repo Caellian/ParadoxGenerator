@@ -1,7 +1,7 @@
 /*
  * The MIT License (MIT)
  * Paradox Generator, random sentence generator.
- * Copyright (c) 2017 Tin Švagelj <tin.svagelj@live.com> a.k.a. Caellian
+ * Copyright (c) 2018 Tin Švagelj <tin.svagelj@live.com> a.k.a. Caellian
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -22,34 +22,10 @@
  * DEALINGS IN THE SOFTWARE.
  */
 
-package hr.caellian.paradox.resource;
+package hr.caellian.paradox.lib
 
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
+import hr.caellian.paradox.data.Localizer
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-
-public class ItemFunction extends ItemTemplate {
-    public ItemFunction(Item parent, Node origin, LinkedList<Item> data) {
-        super(parent, origin, data);
-    }
-
-    public ItemFunction(Item parent, Node origin, ArrayList<Item> data) {
-        super(parent, origin, data);
-    }
-
-    public ItemFunction(Item parent, Node origin, LinkedHashMap<Item, Float> data) {
-        super(parent, origin, data);
-    }
-
-    public ItemFunction(Item parent, Node origin, HashMap<Item, Float> data) {
-        super(parent, origin, data);
-    }
-
-    public String getNestedID() {
-        return (parent != null && !(parent instanceof ItemGenerator)) ? parent.getNestedID() : "";
-    }
+object Resources {
+    var localizer: Localizer? = null
 }
